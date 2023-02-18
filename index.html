@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            width: 100vw;
+            background-color: black;
+            box-sizing: border-box;
+            top: 0px;
+            display: flex;
+            justify-content:center;
+            align-items: center;
+        }
+        .con{
+            display: flex;
+            position: relative;
+            justify-content:center;
+            align-items: center;
+            top: 10vh;
+            /* border: 2px solid rgb(124, 54, 54); */
+            height: 70%;
+            width: 70%;
+            overflow: hidden;
+            z-index: 2;
+            /* border-radius: 50%; */
+        }
+        /* .con p{
+            font-size: 7vh;
+            letter-spacing: 1vh;
+            animation: a2 1s linear infinite;
+        } */
+        .con1{
+            /* border: 2px solid red; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 1vh;
+            /* left: 0vh; */
+            height: auto;
+            width: 100%;
+            z-index: 1;
+            background-color: transparent;
+        }
+        .t1{
+
+            /* display: block; */
+            /* border: 2px solid ; */
+            /* width: 100%; */
+            font-size: 7vh;
+            letter-spacing: 1vh;
+            animation: a2 1s linear infinite;
+        }
+        
+        .p{
+            position: absolute;
+            top: 0;
+            /* width: 100%; */
+            /* height: auto; */
+            background: black;
+            inset: 3px;
+            z-index: 3;
+            /*  */
+            background-image: url("b.jpg") ;
+            /* opacity: 50%; */
+            background-repeat: no-repeat;
+            background-size: 55vw 55vw;
+            background-position: 50% 50%;
+        }
+        .con::before{
+            content: '';
+            position: absolute;
+            height: 70%;
+            width: 20vw;
+            top: 50%;
+            background-color: #00ccff;
+            
+            animation: a1 2s linear infinite;
+            
+        }
+        .con::after{
+            content: '';
+            position: absolute;
+            height: 70%;
+            width: 20vw;
+            top: 50%;
+            background-color: #994fca;
+        
+            animation: a1 2s linear infinite;
+            animation-delay: 1s;
+        }
+        .col{
+            height: 55vw;
+            width: 55vw;
+            background-color: aqua;
+            opacity: 50%;
+            position: absolute;
+            top: 15%;
+            left: 10%;
+            
+        }
+        .con3{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            /* width: 100vw; */
+            height: 5vh;
+            /* border: 2px solid bisque; */
+        }
+        .b{
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .b span{
+            position: relative;
+            
+            width: 3vh;
+            height: 3vh;
+            background-color: rgb(13, 14, 14);
+            margin: 0 3vw;
+            border-radius: 50%;
+            box-shadow: 0 0 1vh aqua,
+            0 0 3vh aqua,
+            0 0 5vh aqua;
+            animation: a3 7s linear infinite;
+           
+            /* animation-duration: calc(120s/var(--i)); */
+        }
+        .b span:nth-child(1){
+            background-color:transparent;
+            box-shadow:0 0 1vh aqua,
+            0 0 3vh aqua, 0 0 5vh aqua;
+            animation-delay: -1s;
+
+        }
+        .b span:nth-child(2){
+            background-color: rgb(165, 115, 212);
+            box-shadow:0 0 1vh blueviolet,
+            0 0 3vh blueviolet, 0 0 5vh blueviolet;
+            animation-delay:-7s;
+            
+        }
+        .b span:nth-child(3){
+            background-color: transparent;
+            box-shadow:0 0 1vh yellow,
+            0 0 3vh yellow, 0 0 5vh yellow;
+            animation-delay: -11s;
+        }
+        .b span:nth-child(4){
+            background-color:transparent;
+            box-shadow:0 0 1vh pink,
+            0 0 3vh pink, 0 0 5vh pink;
+            animation-delay:-5s;
+        }
+        .b span:nth-child(5){
+            background-color:black;
+            box-shadow:0 0 1vh purple,
+            0 0 3vh purple, 0 0 5vh purple;
+            animation-delay: 0s;
+        }
+        .b span:nth-child(6){
+            background-color: palegreen;
+            box-shadow:0 0 1vh palegreen,
+            0 0 3vh palegreen, 0 0 5vh palegreen;
+            animation-delay: -2s;
+        }
+        .b span:nth-child(7){
+            background-color: antiquewhite;
+            box-shadow:0 0 1vh antiquewhite,
+            0 0 3vh antiquewhite, 0 0 5vh antiquewhite;
+            animation-delay: -5s;
+        }
+        .b span:nth-child(8){
+            background-color:orange;
+            box-shadow:0 0 1vh orange,
+            0 0 3vh orange, 0 0 5vh orange;
+            animation-delay: -4s;
+        }
+        .b span:nth-child(9){
+            background-color:transparent;
+            box-shadow:0 0 1vh fuchsia,
+            0 0 3vh fuchsia, 0 0 5vh fuchsia;
+            animation-delay: 0s;
+        }
+        .song{
+                /* border: 2px solid red; */
+                position: absolute;
+                top: 110vh;
+                
+            }
+
+        @keyframes a1{
+            0%{
+                transform: rotate(0deg);
+                transform-origin: top;
+            }
+            100%{
+                transform: rotate(360deg);
+                transform-origin: top;
+            }
+        }
+        @keyframes a2 {
+            0%,20%,20.2%,40%,60%,80%,100%{
+                color: rgb(16, 17, 17);
+                text-shadow: none;
+            }
+            0.1%,20.1%,40.1%,60.1%{
+                color: rgb(255, 255, 255);
+                text-shadow: 0 0 10px rgb(19, 178, 206),
+                0 0 30px rgb(76, 198, 202),
+                0 0 50px rgb(99, 172, 194),
+                0 0 150px rgb(144, 195, 199);
+               
+            }
+        }
+        @keyframes a3{
+            0%{
+                transform: translateY(10vh) scale(0);
+            }
+            100%{
+                transform: translateY(-90vh) scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="con1">
+        <p class="t1">  &nbsp; Happy <br> Birthday</p>
+        
+    </div>
+   
+    <div class="con">
+        <div class="light">
+            <div class="p">
+                <div  class="col"></div>
+            </div>
+        </div>
+    </div>     
+    <div class="con3"> <div class="b">
+        <span style="--i:11"></span>
+        <span style="--i:12"></span>
+        <span style="--i:13"></span>
+        <span style="--i:14"></span>
+        <span style="--i:15"></span>
+        <span style="--i:16"></span>
+        <span style="--i:17"></span>
+        <span style="--i:18"></span>
+        <span style="--i:19"></span>
+        <span style="--i:20"></span>
+    </div>
+</div>
+ <audio controls autoplay class="song">
+    <source src="song.mp3" type="audio/mp3">
+    <!-- <source src="song.mp3" type="audio/mpeg"> -->
+    <!-- <source src="song.mp3" type="audio/ogg"> -->
+ </audio>
+</body>
+</html>
