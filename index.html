@@ -11,6 +11,7 @@
             padding: 0;
             box-sizing: border-box;
         }
+        
         body{
             height: 100vh;
             width: 100vw;
@@ -28,8 +29,8 @@
             align-items: center;
             top: 10vh;
             /* border: 2px solid rgb(124, 54, 54); */
-            height: 70%;
-            width: 70vh;
+            height: 70vw;
+            width: 70vw;
             overflow: hidden;
             z-index: 2;
             /* border-radius: 50%; */
@@ -59,7 +60,7 @@
             /* width: 100%; */
             font-size: 7vh;
             letter-spacing: 1vh;
-            animation: a2 1s linear infinite;
+            /* animation: a2 1s linear infinite; */
         }
         
         .p{
@@ -70,9 +71,9 @@
             background: black;
             inset: 3px;
             z-index: 3;
-            /*  */
-            background-image: url("b.jpg") ;
-            /* opacity: 50%; */
+            
+            /* background-image: url("b.jpg") ; */
+            
             background-repeat: no-repeat;
             background-size: 55vh 55vh;
             background-position: 50% 50%;
@@ -105,8 +106,8 @@
             background-color: aqua;
             opacity: 50%;
             position: absolute;
-            top: 10%;
-            left: 10.5%;
+            top: 5%;
+            left: 5%;
             
         }
         .con3{
@@ -234,10 +235,19 @@
             }
         }
     </style>
+    
 </head>
 <body>
-    <div class="con1">
-        <p class="t1">  &nbsp; Happy <br> Birthday</p>
+    <script>
+      function fun1(){
+        
+        alert("hello");
+          }
+          fun1();
+    </script>
+
+    <div class="con1" >
+        <p id="con" class="t1" >  &nbsp; Happy <br> Birthday</p>
         
     </div>
    
